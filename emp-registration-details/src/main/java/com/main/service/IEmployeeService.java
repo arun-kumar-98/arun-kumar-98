@@ -12,8 +12,6 @@ public interface IEmployeeService {
 
 	void remove(Integer id);
 
-	Employee editDetails(Employee employee);
-
 	Employee getOne(Integer id);
 
 }

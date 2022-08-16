@@ -15,99 +15,102 @@
 				<label>employee update page</label>
 			</div>
 			<div class="card-body">
-				<form th:action="@{/services/update}" id="employee" method="post" th:object="${emp}">
+				<form id="employee" th:action="@{/services/update}" method="post" th:object="${employee}">
+
+
 					<div class="row">
 						<div class="col-2">
-							<label for="empId">ID</label>
+							<label for="id">ID</label>
 						</div>
 						<div class="col-4">
-							<input type="text" th:field="*{empId}" class="form-control" readonly />
+							<input type="text" th:field="*{id}" class="form-control" readonly />
 						</div>
 						<div class="col-6">
 							<span id="idError"></span>
 						</div>
-					</div>
 
-					<!-- row1 -->
-					<div class="row">
-						<div class="col-2">
-							<label>eployee name</label>
+						<!-- row1 -->
+						<div class="row">
+							<div class="col-2">
+								<label>eployee name</label>
+							</div>
+							<div class="col-4">
+								<input type="text" th:field="*{name}" class="form-control"
+									placeholder="enter employee name" />
+							</div>
+							<div class="col-6">
+								<span id="employeeNameError"></span>
+							</div>
 						</div>
-						<div class="col-4">
-							<input type="text" th:field="*{name}" class="form-control"
-								placeholder="enter employee name" />
+						<!-- row-2 -->
+						<div class="row">
+							<div class="col-2">
+								<label>department</label>
+							</div>
+							<div class="col-4">
+								<input type="text" th:field="*{department}" class="form-control"
+									placeholder="enter employee dept" />
+							</div>
+							<div class="col-6">
+								<span id="departmentError"></span>
+							</div>
 						</div>
-						<div class="col-6">
-							<span id="employeeNameError"></span>
+						<!-- row-3 -->
+						<div class="row">
+							<div class="col-2">
+								<label>salary</label>
+							</div>
+							<div class="col-4">
+								<input type="number" th:field="*{salary}" class="form-control"
+									placeholder="enter salary" />
+							</div>
+							<div class="col-6">
+								<span id="salaryError"></span>
+							</div>
 						</div>
-					</div>
-					<!-- row-2 -->
-					<div class="row">
-						<div class="col-2">
-							<label>department</label>
+						<!-- row-4 -->
+						<div class="row">
+							<div class="col-2">
+								<label>address</label>
+							</div>
+							<div class="col-4">
+								<textarea th:field="*{address}" class="form-control"
+									placeholder="enter address here"></textarea>
+							</div>
+							<div class="col-6">
+								<span id="addressError"></span>
+							</div>
 						</div>
-						<div class="col-4">
-							<input type="text" th:field="*{department}" class="form-control"
-								placeholder="enter employee dept" />
+						<!-- row-5 -->
+						<div class="row">
+							<div class="col-2">
+								<label>email</label>
+							</div>
+							<div class="col-4">
+								<input type="email" th:field="*{email}" class="form-control"
+									placeholder="enter email here" />
+							</div>
+							<div class="col-6">
+								<span id="emailError"></span>
+							</div>
 						</div>
-						<div class="col-6">
-							<span id="departmentError"></span>
+						<!-- row-6 -->
+						<div class="row">
+							<div class="col-2">
+								<label>phone</label>
+							</div>
+							<div class="col-4">
+								<input type="tel" th:field="*{phone}" class="form-control"
+									placeholder="enter phone number" />
+							</div>
+							<div class="col-6">
+								<span id="phoneError"></span>
+							</div>
 						</div>
-					</div>
-					<!-- row-3 -->
-					<div class="row">
-						<div class="col-2">
-							<label>salary</label>
-						</div>
-						<div class="col-4">
-							<input type="number" th:field="*{salary}" class="form-control" placeholder="enter salary" />
-						</div>
-						<div class="col-6">
-							<span id="salaryError"></span>
-						</div>
-					</div>
-					<!-- row-4 -->
-					<div class="row">
-						<div class="col-2">
-							<label>address</label>
-						</div>
-						<div class="col-4">
-							<textarea th:field="*{address}" class="form-control"
-								placeholder="enter address here"></textarea>
-						</div>
-						<div class="col-6">
-							<span id="addressError"></span>
-						</div>
-					</div>
-					<!-- row-5 -->
-					<div class="row">
-						<div class="col-2">
-							<label>email</label>
-						</div>
-						<div class="col-4">
-							<input type="email" th:field="*{email}" class="form-control"
-								placeholder="enter email here" />
-						</div>
-						<div class="col-6">
-							<span id="emailError"></span>
-						</div>
-					</div>
-					<!-- row-6 -->
-					<div class="row">
-						<div class="col-2">
-							<label>phone</label>
-						</div>
-						<div class="col-4">
-							<input type="tel" th:field="*{phone}" class="form-control"
-								placeholder="enter phone number" />
-						</div>
-						<div class="col-6">
-							<span id="phoneError"></span>
-						</div>
-					</div>
-					<!-- submit button -->
-					<button type="submit" class="btn btn-success">update<i class="fa fa-wrench" aria-hidden="true"></i>
-					</button>
+						<!-- submit button -->
+						<button type="submit" class="btn btn-success">update<i class="fa fa-wrench"
+								aria-hidden="true"></i>
+						</button>
 				</form>
 			</div>
 			<div class="card-footer text-white text-center bg-info">

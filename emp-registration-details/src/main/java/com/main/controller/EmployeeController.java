@@ -55,11 +55,10 @@ public class EmployeeController {
 		return "redirect:getAll";
 	}
 
-	@GetMapping("/edit")
+	@GetMapping("/update")
 	public String updateRecord(@RequestParam Integer id, Model model) {
 		Employee employee2 = employeeService.getOne(id);
-
-		model.addAttribute("employee", employee2);
+		model.addAttribute("emp", employee2);
 		return "employeeEdit";
 
 	}

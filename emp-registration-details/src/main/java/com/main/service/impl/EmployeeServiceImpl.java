@@ -35,18 +35,14 @@ public class EmployeeServiceImpl implements IEmployeeService {
 	}
 
 	@Override
-	public Employee editDetails(Employee employee) {
-
-		return employeeRepository.save(employee);
-	}
-
-	@Override
 	public Employee getOne(Integer id) {
 		Optional<Employee> optional = employeeRepository.findById(id);
 		if (optional.isPresent()) {
 			Employee employee = optional.get();
+			
+			return employee;
 		}
 		return null;
-		
+
 	}
 }
